@@ -2,6 +2,10 @@ const gh = document.querySelector('.js-calendar-graph')
 if (gh) {
   console.log('gh profile')
   const weekDays = document.querySelectorAll('.wday')
+  shiftNames(weekDays)
+}
+
+function shiftNames (weekDays) {
   const days = []
   weekDays.forEach((day) => {
     days.push(day.innerHTML)
