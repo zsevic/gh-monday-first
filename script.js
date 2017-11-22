@@ -9,5 +9,10 @@ if (gh) {
   days.push(days.shift())
   weekDays.forEach((day, index) => {
     day.innerHTML = days[index]
+    if (index % 2) {
+      day.style['display'] = 'none'
+    } else {
+      day.style['display'] = 'inline'
+    }
   })
 }
