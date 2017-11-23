@@ -3,6 +3,23 @@ if (gh) {
   console.log('gh profile')
   const weekDays = document.querySelectorAll('.wday')
   shiftNames(weekDays)
+  const yearDays = document.querySelectorAll('.day')
+  shiftDays(yearDays)
+}
+
+function shiftDays (yearDays) {
+  yearDays.forEach((day, index) => {
+    if (index % 7 === 0) {
+      if (index === 0) {
+        day.style['display'] = 'none'
+      } else {
+        day.y.baseVal.value = 72
+        day.setAttribute('transform', 'translate(-12,0)')
+      }
+    } else {
+      day.y.baseVal.value = day.y.baseVal.value - 12
+    }
+  })
 }
 
 function shiftNames (weekDays) {
