@@ -27,7 +27,7 @@ function shiftDays (yearDays) {
   })
 }
 
-function shiftNames (weekDays) {
+export default function shiftNames (weekDays) {
   const days = []
   weekDays.forEach(day => {
     days.push(day.innerHTML)
@@ -41,9 +41,4 @@ function shiftNames (weekDays) {
       day.style['display'] = 'inline'
     }
   })
-}
-
-module.exports = {
-  shiftDays,
-  shiftNames
 }

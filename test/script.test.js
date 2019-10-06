@@ -1,4 +1,4 @@
-const { shiftDays, shiftNames } = require('../script')
+import shiftNames from '../script'
 
 describe('check location', () => {
   it('should work only on Github profile pages', () => {
