@@ -5,6 +5,6 @@
     "description": "Chrome extension that changes order of the days (Sunday and Monday) on Github user's contributions heatmap",
     "content_scripts":[{
         "matches": ["*://*.github.com/*"],
-        "js": ["script.js"]
+        "js": ["dist/script.js"]
     }]
 }

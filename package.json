@@ -1,9 +1,10 @@
 {
   "name": "gh-monday-first",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Chrome extension that changes order of the days (Sunday and Monday) on Github user's contributions heatmap",
   "main": "script.js",
   "scripts": {
+    "build": "webpack",
     "test": "jest"
   },
   "repository": {
@@ -14,9 +15,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
-    "babel-jest": "^24.9.0",
-    "jest": "^25.0.0"
-  }
+    "babel-loader": "^8.0.6",
+    "jest": "^25.0.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {}
 }
