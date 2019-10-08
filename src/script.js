@@ -17,12 +17,12 @@ function shiftDays (yearDays) {
         day.style['display'] = 'none'
         // shift Sunday box to the bottom and translate it to the left
       } else {
-        day.y.baseVal.value = 72
-        day.setAttribute('transform', 'translate(-12,0)')
+        day.y.baseVal.value = 78
+        day.setAttribute('transform', 'translate(-13,0)')
       }
       // shift other days to the top
     } else {
-      day.y.baseVal.value = day.y.baseVal.value - 12
+      day.y.baseVal.value = day.y.baseVal.value - 13
     }
   })
 }
