@@ -1,4 +1,4 @@
-import { shiftNames } from '../src/script';
+import { shiftWeekdayNames } from '../src/script';
 
 describe('check location', () => {
   it('should work only on Github profile pages', () => {
@@ -10,7 +10,7 @@ describe('check location', () => {
   });
 });
 
-describe('shift names', () => {
+describe('shift weekday names', () => {
   it('should display Sunday', () => {
     document.body.innerHTML = `
         <text text-anchor="start" class="wday" dx="-14" dy="8" style="display: none;">Sun</text>
@@ -23,11 +23,12 @@ describe('shift names', () => {
     `;
     const weekDays = document.querySelectorAll('.wday');
 
-    shiftNames(weekDays);
+    shiftWeekdayNames(weekDays);
 
     const style = weekDays[6].style.display;
     expect(style).toBe('inline');
   });
+
   it('should display Monday as first day', () => {
     document.body.innerHTML = `
         <text text-anchor="start" class="wday" dx="-14" dy="8" style="display: none;">Sun</text>
@@ -40,7 +41,7 @@ describe('shift names', () => {
     `;
     const weekDays = document.querySelectorAll('.wday');
 
-    shiftNames(weekDays);
+    shiftWeekdayNames(weekDays);
 
     const firstDay = weekDays[0].innerHTML;
     expect(firstDay).toBe('Mon');
@@ -58,7 +59,7 @@ describe('shift names', () => {
     `;
     const weekDays = document.querySelectorAll('.wday');
 
-    shiftNames(weekDays);
+    shiftWeekdayNames(weekDays);
 
     const lastDay = weekDays[6].innerHTML;
     expect(lastDay).toBe('Sun');

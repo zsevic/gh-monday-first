@@ -16,7 +16,7 @@ function shiftDays(yearDays) {
   });
 }
 
-export function shiftNames(weekDays) {
+export function shiftWeekdayNames(weekDays) {
   const days = [];
   weekDays.forEach((day) => {
     days.push(day.innerHTML);
@@ -32,12 +32,12 @@ export function shiftNames(weekDays) {
   });
 }
 
-const gh = document.querySelector('.js-calendar-graph');
-// check if the user is on some Github profile's page
-if (gh) {
+const isGithubProfilePage = document.querySelector('.js-calendar-graph');
+
+if (isGithubProfilePage) {
   const weekDays = document.querySelectorAll('.ContributionCalendar-label');
-  // shift names of the days on the left side
-  shiftNames(weekDays);
+  shiftWeekdayNames(weekDays);
+
   const yearDays = document.querySelectorAll('.ContributionCalendar-day');
   shiftDays(yearDays);
 }
