@@ -11,6 +11,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'import/prefer-default-export': 'warn',
     'no-param-reassign': 'warn',
   },
 };
