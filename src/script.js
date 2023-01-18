@@ -35,7 +35,6 @@ export default function shiftNames(weekDays) {
 const gh = document.querySelector('.js-calendar-graph');
 // check if the user is on some Github profile's page
 if (gh) {
-  console.log('gh profile');
   const weekDays = document.querySelectorAll('.ContributionCalendar-label');
   // shift names of the days on the left side
   shiftNames(weekDays);
