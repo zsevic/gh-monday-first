@@ -2,7 +2,7 @@
   "name": "gh-monday-first",
   "version": "1.0.1",
   "description": "Chrome extension that changes order of the days (Sunday and Monday) on Github user's contributions heatmap",
-  "main": "script.js",
+  "main": "src/script.js",
   "scripts": {
     "build": "webpack",
     "test": "jest"
