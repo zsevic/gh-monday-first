@@ -1,4 +1,4 @@
-import shiftNames from '../src/script';
+import { shiftNames } from '../src/script';
 
 describe('check location', () => {
   it('should work only on Github profile pages', () => {

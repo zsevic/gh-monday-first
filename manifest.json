@@ -1,10 +1,12 @@
 {
-    "manifest_version": 3,
-    "name": "gh-monday-first",
-    "version": "1.0.1",
-    "description": "Chrome extension that changes order of the days (Sunday and Monday) on Github user's contributions heatmap",
-    "content_scripts":[{
-        "matches": ["*://*.github.com/*"],
-        "js": ["dist/script.js"]
-    }]
+  "manifest_version": 3,
+  "name": "gh-monday-first",
+  "version": "1.0.1",
+  "description": "Chrome extension that changes order of the days (Sunday and Monday) on Github user's contributions heatmap",
+  "content_scripts": [
+    {
+      "matches": ["*://*.github.com/*"],
+      "js": ["dist/script.js"]
+    }
+  ]
 }
