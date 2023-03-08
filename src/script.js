@@ -2,19 +2,17 @@ const WEEK_DAYS_LENGTH = 7;
 
 function shiftDays(yearDays) {
   yearDays.forEach((day, index) => {
-    if (index % WEEK_DAYS_LENGTH === 0) {
-      if (index === 0) {
-        // remove first Sunday
-        day.style.display = 'none';
-      } else {
-        // shift Sunday box to the bottom and translate it to the left
-        day.setAttribute('transform', 'translate(-13, 0)');
-        day.setAttribute('transform', 'translate(0, -78)');
-      }
-    } else {
-      // shift other days to the top
-      day.setAttribute('transform', 'translate(13, 0)');
+    if (index === 0) {
+      day.style.display = 'none';
+      return;
     }
+
+    if (day.innerHTML.includes('Sunday')) {
+      day.setAttribute('transform', 'translateX(-13)');
+      return;
+    }
+
+    day.style.transform = 'translateY(-13px)';
   });
 }
 
