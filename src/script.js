@@ -16,7 +16,6 @@ function shiftDays(yearDays) {
   });
 }
 
-
 export function shiftWeekdayNames(weekDays) {
   const days = [];
 

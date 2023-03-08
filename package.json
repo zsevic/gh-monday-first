@@ -7,7 +7,7 @@
     "build": "webpack",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "repository": {
     "type": "git",
