@@ -1,6 +1,8 @@
+const WEEK_DAYS_LENGTH = 7;
+
 function shiftDays(yearDays) {
   yearDays.forEach((day, index) => {
-    if (index % 7 === 0) {
+    if (index % WEEK_DAYS_LENGTH === 0) {
       if (index === 0) {
         // remove first Sunday
         day.style.display = 'none';
@@ -18,7 +20,6 @@ function shiftDays(yearDays) {
 
 
 export function shiftWeekdayNames(weekDays) {
-  const WEEK_DAYS_LENGTH = 7;
   const days = [];
 
   weekDays.forEach((day, index) => {
