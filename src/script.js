@@ -33,6 +33,9 @@ export function shiftWeekdayNames(weekDays) {
     const weekDayIndex = WEEK_DAYS_LENGTH - diff;
 
     day.innerHTML = days[weekDayIndex].innerHTML;
+    if (index === weekDays.length - 1) {
+      day.lastChild.previousSibling.textContent = 'Sun';
+    }
   });
 }
 
