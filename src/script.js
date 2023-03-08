@@ -18,7 +18,8 @@ function shiftDays(yearDays) {
 
 export function shiftWeekdayNames(weekDays) {
   const days = [];
-  weekDays.forEach((day) => {
+  weekDays.forEach((day, index) => {
+    if (index < weekDays.length - 7) return;
     days.push(day.innerHTML);
   });
   days.push(days.shift());
