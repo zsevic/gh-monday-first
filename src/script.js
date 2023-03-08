@@ -16,7 +16,9 @@ function shiftDays(yearDays) {
   });
 }
 
+
 export function shiftWeekdayNames(weekDays) {
+  const WEEK_DAYS_LENGTH = 7;
   const days = [];
   weekDays.forEach((day, index) => {
     if (index < weekDays.length - 7) return;
@@ -24,9 +26,11 @@ export function shiftWeekdayNames(weekDays) {
   });
   days.push(days.shift());
   weekDays.forEach((day, index) => {
-    day.innerHTML = days[index];
+    if (index < weekDays.length - WEEK_DAYS_LENGTH) return;
+    const diff = weekDays.length - index;
+    day.innerHTML = days[WEEK_DAYS_LENGTH - diff];
     if (index % 2) {
-      day.style.display = 'none';
+      day.innerHTML = '';
     } else {
       day.style.display = 'inline';
     }
