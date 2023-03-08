@@ -20,15 +20,20 @@ function shiftDays(yearDays) {
 export function shiftWeekdayNames(weekDays) {
   const WEEK_DAYS_LENGTH = 7;
   const days = [];
+
   weekDays.forEach((day, index) => {
     if (index < weekDays.length - WEEK_DAYS_LENGTH) return;
     days.push(day.innerHTML);
   });
+
   days.push(days.shift());
+
   weekDays.forEach((day, index) => {
     if (index < weekDays.length - WEEK_DAYS_LENGTH) return;
+
     const diff = weekDays.length - index;
     const weekDayIndex = WEEK_DAYS_LENGTH - diff;
+
     day.innerHTML = days[weekDayIndex];
   });
 }
