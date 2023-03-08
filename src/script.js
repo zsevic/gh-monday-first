@@ -8,7 +8,7 @@ function shiftDays(yearDays) {
     }
 
     if (day.innerHTML.includes('Sunday')) {
-      day.style.transform = 'translate(-13px, 78px)';
+      day.style.transform = 'translate(0, 78px)';
       return;
     }
 
