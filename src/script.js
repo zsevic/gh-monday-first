@@ -21,7 +21,7 @@ export function shiftWeekdayNames(weekDays) {
   const WEEK_DAYS_LENGTH = 7;
   const days = [];
   weekDays.forEach((day, index) => {
-    if (index < weekDays.length - 7) return;
+    if (index < weekDays.length - WEEK_DAYS_LENGTH) return;
     days.push(day.innerHTML);
   });
   days.push(days.shift());
@@ -29,11 +29,6 @@ export function shiftWeekdayNames(weekDays) {
     if (index < weekDays.length - WEEK_DAYS_LENGTH) return;
     const diff = weekDays.length - index;
     day.innerHTML = days[WEEK_DAYS_LENGTH - diff];
-    if (index % 2) {
-      day.innerHTML = '';
-    } else {
-      day.style.display = 'inline';
-    }
   });
 }
 
